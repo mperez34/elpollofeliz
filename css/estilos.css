@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #3643d4;
+    color: yellow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 98%;
+    margin: auto;
+}
+
+.icon-feliz {
+    float: left;
+    color: #ed2913;
+}
+
+.title-feliz {
+    float: left;
+    color: yellow;
+}
+
+header .container {
+    display: table;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+/*Menu Styles*/
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 1.75em;
+    margin: 0.3em 0em;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 3.1em;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(54, 67, 212, 0.7);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a {
+    display: block;
+    color: yellow;
+    height: 3.1em;
+    text-decoration: none;
+    padding: 1em;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+}
+
+@media (min-width:1024px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+
+    .menu a {
+        border: none;
+    }
+
+    header label {
+        display: none;
+    }
+
+    .container {
+        width: 63em;
+    }
+}
+
+/*Banner styles*/
+
+.banner {
+    margin-top: 3.1em ;
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.banner .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: yellow;
+    
+}
+
+.banner h2 {
+    font-size: 1.75em;
+    -webkit-text-stroke: 0.01px  #ed2913;
+}
+
+.banner a {
+    display: block;
+    width: 6.25em;
+    color: yellow;
+    text-decoration:none;
+    padding: 0.4em;
+    margin-top: 0.6em;
+    border: 3px solid yellow;
+}
+
+.banner a:hover {
+    background: rgba(54, 67, 212, 0.7)
+}
+
+@media (min-width:480px) {
+    .banner h2 {
+        font-size: 2.5em;
+    }
+
+    .banner a {
+        margin-top: 1.5em ;
+    }
+}
+
+@media (min-width:768px) {
+    .banner {
+        height: 18.75em;
+        overflow: hidden;
+    }
+
+    .banner img {
+        height: auto;
+        margin-top: -100px;
+    }
+}
+
+@media (min-width:1024px) {
+
+    .banner img {
+        margin-top: -200px;
+    }
+}
+
+
+/*Bienvenidos styles*/
+
+.section-bienvenidos {
+    text-align: center;
+    color: #3643d4;
+}
+
+.section-bienvenidos p {
+    color: #ed2913;
+}
+
+/*Section feliz styles*/
+.section-feliz h3,h4 {
+    text-align: center;
+    color: #ed2913;
+}
+.section-feliz .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-feliz article {
+    margin:0.9em;
+}
+
+.section-feliz img {
+    width: 100%;
+    max-width: 18em;
+}
+
+/*Section Social styles*/
+
+.section-social {
+    background: #3643d4;
+    color: yellow;
+    text-align: center;
+    padding: 1.25em;
+}
+
+.section-social .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-net {
+    margin: 1.25em;
+}
+
+.social-net img{
+   width: 11.25em;
+   height: 11.25em;
+   border-radius: 50%; 
+   border: 0.4em solid #ed2913 ;
+}
+
+@media (min-width:480px) {
+    .social-net {
+        width: 40%;
+    }
+}
+
+@media (min-width:1024px) {
+    .social-net {
+        width: auto;
+    }
+}
+
+/*Footer styles*/
+footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1.5em;
+}
+
+.copyright{
+    font-size: 1.25em;
+}
+
+.mp-social{
+    width: 100%;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+.mp-social a {
+    color:#3643d4;
+    text-decoration: none;
+}
+
+@media (min-width:768px) {
+    .mp-social {
+        width: auto;
+    }
+
+    footer .container {
+        justify-content: space-between;
+    }
+}
